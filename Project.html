@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DolphinAI - The intelligent cryptocurrency powered by AI and inspired by dolphins.">
+    <title>DolphinAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #1f1f1f;
+            color: #00bcd4;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header nav a {
+            color: #00bcd4;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: #333;
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('particles.gif') repeat;
+            z-index: -1;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #212121;
+        }
+        .about h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #00bcd4;
+        }
+        .about p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .progress-bar {
+            background-color: #333;
+            height: 10px;
+            width: 0;
+            border-radius: 5px;
+            transition: width 1s ease-in-out;
+        }
+        .progress-container {
+            margin-top: 20px;
+            background: #555;
+            width: 100%;
+            max-width: 800px;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 20px auto 0;
+        }
+
+        /* Roadmap Section */
+        .roadmap {
+            padding: 80px 20px;
+            background-color: #333;
+            text-align: center;
+        }
+        .roadmap h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #00bcd4;
+        }
+        .roadmap ul {
+            list-style: none;
+            padding: 0;
+        }
+        .roadmap li {
+            font-size: 18px;
+            margin: 15px 0;
+            color: #fff;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            background-color: #1f1f1f;
+            color: white;
+            text-align: center;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #00bcd4;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #fff;
+            font-size: 16px;
+            box-sizing: border-box;  /* Ensures padding is included in width */
+            max-width: 100%;  /* Prevent oversize on smaller screens */
+        }
+        .contact form textarea {
+            resize: vertical; /* Allows vertical resizing only */
+            height: 150px;
+        }
+        .contact form button {
+            padding: 15px 30px;
+            background-color: #00bcd4;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            max-width: 100%;
+        }
+        .contact form button:hover {
+            background-color: #0097a7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212121;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #0097a7;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Query for Responsiveness */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .about h2, .roadmap h2, .contact h2 {
+                font-size: 32px;
+            }
+            .about p, .roadmap li, .contact form input, .contact form textarea {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DolphinAI</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to DolphinAI</h1>
+        <p>Bringing AI-powered blockchain solutions inspired by the intelligence of dolphins.</p>
+        <div class="particles"></div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About DolphinAI</h2>
+        <p>DolphinAI is a cryptocurrency designed to revolutionize digital finance with AI-powered trading solutions.</p>
+        <div class="progress-container">
+            <div class="progress-bar" id="about-progress"></div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="roadmap">
+        <h2>Roadmap</h2>
+        <ul>
+            <li><strong>Q1 2024:</strong> Launch of DolphinAI whitepaper.</li>
+            <li><strong>Q2 2024:</strong> Initial coin offering (ICO) and platform development.</li>
+            <li><strong>Q3 2024:</strong> AI-powered trading feature integration.</li>
+            <li><strong>Q4 2024:</strong> Expansion of ecosystem with marine conservation initiatives.</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="send_email.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 DolphinAI. All Rights Reserved. | <a href="https://twitter.com/DolphinAI_Crypto" target="_blank">Follow us on Twitter</a></p>
+    </footer>
+
+    <script>
+        // Animate Progress Bars on Scroll
+        window.addEventListener('scroll', function () {
+            const aboutProgress = document.getElementById('about-progress');
+            if (aboutProgress.getBoundingClientRect().top < window.innerHeight) {
+                aboutProgress.style.width = '80%';
+            }
+        });
+    </script>
+</body>
+  </html>
+  
